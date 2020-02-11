@@ -1,0 +1,22 @@
+<!-- Dropdown Structure -->
+<ul id="dropdown1" class="dropdown-content">
+  <li><a href="#!">one</a></li>
+  <li><a href="#!">two</a></li>
+  <li class="divider"></li>
+  <li><a href="#!">three</a></li>
+</ul>
+<nav>
+  <div class="nav-wrapper pink">
+    <a href="#!" class="brand-logo">Proyecto1</a>
+    <ul class="right hide-on-med-and-down">
+      <li><a *ngIf="!_authService.loggedIn()" [routerLink]="['/login']">
+        SignIn
+      </a></li>
+      <a class="nav-link" style="cursor:pointer" *ngIf="_authService.loggedIn()" (click)="_authService.logoutUser()">Logout</a>
+      <!-- Dropdown Trigger -->
+    </ul>
+  </div>
+</nav>
+
+  <router-outlet></router-outlet>            
+
