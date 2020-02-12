@@ -5,13 +5,13 @@ import {HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MedidasComponent } from './components/medidas/medidas.component';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 
-import { AuthService } from './auth.service';
+import { AuthService } from './services/auth.service';
 import { AuthGuard } from './auth.guard';
-import {TokenInterceptorService} from './token-interceptor.service';
+import {TokenInterceptorService} from './services/token-interceptor.service';
 
 
 @NgModule({
